@@ -31,26 +31,26 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "0";
+            display-name = "Base";
             bindings = <
-&kp ESC    &kp N1  &kp N2   &kp N3    &kp N4    &kp N5                         &kp N6    &kp N7    &kp N8     &kp N9     &kp N0    &kp BACKSPACE
+&kp ESC    &kp N1  &kp N2   &kp N3    &kp N4    &kp N5                         &kp N6    &kp N7    &kp N8     &kp N9     &kp N0    &kp MINUS
 &kp TAB    &kp Q   &kp W    &kp E     &kp R     &kp T                          &kp Y     &kp U     &kp I      &kp O      &kp P     &kp INS
 &kp LCTRL  &kp A   &kp S    &kp D     &kp F     &kp G                          &kp H     &kp J     &kp K      &kp L      &kp SEMI  &kp SINGLE_QUOTE
 &kp LSHFT  &kp Z   &kp X    &kp C     &kp V     &kp B   &kp C_MUTE    &none    &kp N     &kp M     &kp COMMA  &kp DOT    &kp FSLH  &kp HOME
-                   &input_change  &kp LGUI  &kp LALT  &mo 1   &kp SPACE     &kp RET  &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT
+                   &kp DELETE  &kp LGUI  &kp LALT  &mo 1   &kp SPACE     &kp RET  &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
         };
 
         lower_layer {
-            display-name = "1";
+            display-name = "Not Base";
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &bt BT_CLR       &trans        &trans            &kp MINUS          &kp EQUAL      &kp DEL
-&trans     &trans        &trans        &trans        &trans        &trans                                    &rgb_ug RGB_TOG  &out OUT_TOG  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp F12
-&trans     &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                    &kp F6           &kp F7        &kp F8            &kp F9             &kp F10        &kp F11
+&kp TILDE  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                              &kp F6       &kp F7        &kp F8            &kp F9          &kp F10      &kp EQUAL
+&trans     &kp F11       &kp F12        &trans        &trans        &trans                                    &rgb_ug RGB_TOG  &out OUT_TOG  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
+&trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                          &bt BT_CLR           &trans        &trans            &trans             &trans        &trans
 &trans     &trans        &trans        &trans        &trans        &trans        &bootloader    &bootloader  &trans           &trans        &trans            &trans             &trans         &kp END
-                         &trans        &trans        &trans        &trans        &trans         &trans       &trans           &trans
+                         &trans        &trans        &trans        &trans        &trans         &kp BACKSPACE       &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
