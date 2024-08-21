@@ -13,6 +13,8 @@
 
 #define BASE 0
 #define LOWER 1
+#define ARROW 2
+#define BLUE 3
 
 #define KEYS_L LN5 LN4 LN3 LN2 LN1 LN0 LT5 LT4 LT3 LT2 LT1 LT0 LM5 LM4 LM3 LM2 LM1 LM0 LB5 LB4 LB3 LB2 LB1 LB0 LEC  // left-hand keys
 #define KEYS_R RN0 RN1 RN2 RN3 RN4 RN5 RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 REC RB0 RB1 RB2 RB3 RB4 RB5  // right-hand keys
@@ -61,21 +63,47 @@
 &kp ESC    &kp N1  &kp N2   &kp N3    &kp N4    &kp N5                         &kp N6    &kp N7    &kp N8     &kp N9     &kp N0    &kp MINUS
 &kp TAB    &kp Q   &kp W    &kp E     &kp R     &kp T                          &kp Y     &kp U     &kp I      &kp O      &kp P     &kp INS
 &kp LCTRL  &kp A   &kp S    &hml LSHIFT D     &lt LOWER F     &hml LCTRL G     &hmr LCTRL H     &lt LOWER J     &hmr LSHIFT K      &kp L      &kp SEMI  &kp SINGLE_QUOTE
-&kp LSHFT  &kp Z   &kp X    &kp C     &kp V     &kp B   &kp C_MUTE    &none    &kp N     &kp M     &kp COMMA  &kp DOT    &kp FSLH  &kp HOME
-                   &kp DELETE  &kp LGUI  &kp LALT  &mo 1   &kp SPACE     &kp RET  &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT
+&kp LSHFT  &lt ARROW Z   &kp X    &kp C     &kp V     &lt BLUE B   &kp C_MUTE    &none    &kp N     &kp M     &kp COMMA  &kp DOT    &lt ARROW FSLH  &kp HOME
+                   &kp DELETE  &kp LGUI  &kp LALT  &mo LOWER   &kp SPACE     &kp RET  &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
         };
 
         lower_layer {
-            display-name = "Not Base";
+            display-name = "Lower";
             bindings = <
 &kp TILDE  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                              &kp F6       &kp F7        &kp F8            &kp F9          &kp F10      &kp EQUAL
-&trans     &kp F11       &kp F12        &trans        &trans        &trans                                    &rgb_ug RGB_TOG  &out OUT_TOG  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
-&trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                          &bt BT_CLR           &trans        &trans            &kp CAPSLOCK             &trans        &trans
+&trans     &kp F11       &kp F12        &trans        &trans        &trans                                    &trans        &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
+&trans     &trans     &trans        &trans        &trans        &trans                          &trans           &trans        &trans            &kp CAPSLOCK             &trans        &trans
 &trans     &trans        &trans        &trans        &trans        &trans        &bootloader    &bootloader  &trans           &trans        &trans            &trans             &trans         &kp END
-                         &trans        &trans        &trans        &trans        &trans         &kp BACKSPACE       &trans           &trans
+                         &trans        &trans        &trans        &trans        &trans         &kp BACKSPACE       &trans           &trans           &trans           &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
+        };
+
+        arrow_layer {
+            display-name = "Arrow";
+            bindings = <
+&trans     &trans     &trans        &trans        &trans        &trans             &trans           &trans        &trans            &trans             &trans              &trans
+&trans     &trans     &trans        &trans        &trans        &trans             &trans           &trans        &trans            &trans             &trans              &trans
+&trans     &trans     &trans        &trans        &trans        &trans             &kp LEFT           &kp DOWN           &kp UP           &kp RIGHT             &trans              &trans
+&trans     &trans     &trans        &trans        &trans        &trans        &trans    &trans             &trans           &trans        &trans            &trans             &trans              &trans
+                         &trans        &trans        &trans        &trans        &trans         &trans       &trans           &trans           &trans           &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
+        };
+
+        bluetooth_layer {
+            display-name = "Blue";
+            bindings = <
+&trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4             &bt BT_CLR           &trans        &trans            &trans             &trans              &trans
+&trans     &trans     &trans        &trans        &trans        &trans             &rgb_ug RGB_TOG  &out OUT_TOG        &trans            &trans             &trans              &trans
+&trans     &trans     &trans        &trans        &trans        &trans             &trans           &trans        &trans            &trans             &trans              &trans
+&trans     &trans     &trans        &trans        &trans        &trans        &trans    &trans             &trans           &trans        &trans            &trans             &trans              &trans
+                         &trans        &trans        &trans        &trans        &trans         &trans       &trans           &trans           &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
