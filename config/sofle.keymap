@@ -61,9 +61,9 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp ESC    &none  &none   &none    &none    &none                         &none    &none    &none     &none     &none    &kp MINUS
+&kp ESC    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                         &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp MINUS
 &kp TAB    &kp Q   &kp W    &kp E     &kp R     &lt NUMBER T                   &lt NUMBER Y     &kp U     &kp I      &kp O      &kp P     &none
-&none  &hml LCTRL A   &kp S    &hml LSHIFT D     &lt LOWER F     &hml LALT G     &hmr LALT H     &lt LOWER J     &hmr LSHIFT K      &hml LCTRL L      &kp SEMI  &kp SINGLE_QUOTE
+&none  &hml LALT A   &kp S    &hml LSHIFT D     &lt LOWER F     &hml LCTRL G     &hmr LCTRL H     &lt LOWER J     &hmr LSHIFT K      &hml RALT L      &kp SEMI  &kp SINGLE_QUOTE
 &none  &lt ARROW Z   &kp X    &kp C     &kp V     &lt BLUE B   &kp C_MUTE    &none    &kp N     &kp M     &kp COMMA  &kp DOT    &lt ARROW FSLH  &none
                    &none  &kp LGUI  &none  &mo LOWER   &kp SPACE     &kp RET  &none  &none  &none     &none
             >;
@@ -77,7 +77,7 @@
 &kp TILDE  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                              &kp F6       &kp F7        &kp F8            &kp F9          &kp F10      &kp EQUAL
 &trans     &kp F11       &kp F12        &trans        &trans        &trans                                    &trans        &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
 &trans     &trans     &trans        &trans        &trans        &trans                          &trans           &trans        &trans            &kp CAPSLOCK             &trans        &trans
-&trans     &trans        &trans        &trans        &trans        &trans        &bootloader    &bootloader  &kp INS           &kp HOME        &kp END            &trans             &trans         &kp END
+&trans     &trans        &trans        &trans        &trans        &trans        &bootloader    &bootloader  &kp INS           &kp HOME        &kp END            &kp DEL             &trans         &kp END
                          &trans        &trans        &trans        &trans        &trans         &kp BACKSPACE       &trans           &trans           &trans           &trans
             >;
 
