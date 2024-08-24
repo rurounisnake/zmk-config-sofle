@@ -27,30 +27,30 @@
     hml: homerow_mods_left {
       compatible = "zmk,behavior-hold-tap";
       label = "HOMEROW_MODS_LEFT";
-      #binding - cells = < 2 > ;
-      bindings = < &kp > , < &kp > ;
+      #binding - cells = <2> ;
+      bindings = <&kp> , <&kp> ;
 
       flavor = "balanced";
-      tapping - term - ms = < 280 > ;
-      quick - tap - ms = < 175 > ; // repeat on tap-into-hold
+      tapping - term - ms = <280> ;
+      quick - tap - ms = <175> ; // repeat on tap-into-hold
       // global-quick-tap-ms = <150>;         // requires PR #1387
       global - quick - tap;
-      hold - trigger - key - positions = < KEYS_R THUMBS > ;
+      hold - trigger - key - positions = <KEYS_R THUMBS> ;
       hold - trigger - on - release;
     };
 
     hmr: homerow_mods_right {
       compatible = "zmk,behavior-hold-tap";
       label = "HOMEROW_MODS_RIGHT";
-      #binding - cells = < 2 > ;
-      bindings = < &kp > , < &kp > ;
+      #binding - cells = <2> ;
+      bindings = <&kp> , <&kp> ;
 
       flavor = "balanced";
       tapping - term - ms = < 280 > ;
       // global-quick-tap-ms = <150>;         // requires PR #1387
       quick_tap_ms = < 175 > ;
       global - quick - tap;
-      hold - trigger - key - positions = < KEYS_L THUMBS > ;
+      hold - trigger - key - positions = <KEYS_L THUMBS> ;
       hold - trigger - on - release;
     };
 
