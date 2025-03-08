@@ -62,9 +62,9 @@
         bindings = <
           &kp ESC &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &kp MINUS
           &kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp BACKSLASH
-          &kp LCTRL &lt NUMBER A &kp S &hml LSHIFT D &lt LOWER F &hml LCTRL G &hmr LCTRL H &lt LOWER J &hmr LSHIFT K &hml RALT L &lt NUMBER SEMI &kp SINGLE_QUOTE
+          &kp LCTRL &lt NUMBER A &kp S &hml LSHIFT D &lt LOWER F &hml LCTRL G &hmr LCTRL H &lt LOWER J &hmr LSHIFT K &kp L &lt NUMBER SEMI &kp SINGLE_QUOTE
           &kp LSHIFT &lt ARROW Z &kp X &kp C &kp V &lt BLUE B &kp C_MUTE &none &kp N &kp M &kp COMMA &kp DOT &lt ARROW FSLH &kp EQUAL
-          &kp LGUI &kp LALT &kp LEFT &kp RIGHT &kp SPACE &kp RET &kp DOWN &kp UP &kp LEFT_BRACKET &kp RIGHT_BRACKET
+          &kp LALT &kp LEFT &kp RIGHT &kp LGUI &kp SPACE &kp RET &kp BACKSPACE &kp DOWN &kp UP &kp RALT
 		>;
 
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
@@ -74,10 +74,10 @@
         display-name = "Lower";
         bindings = <
           &kp TILDE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &trans
-          &trans &kp F11 &kp F12 &trans &trans &trans &trans &trans &trans &trans &trans &trans
+          &trans &kp F11 &kp F12 &trans &trans &trans &trans &trans &trans &kp LEFT_BRACKET &kp RIGHT_BRACKET &trans
           &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp CAPSLOCK &trans &trans
           &trans &trans &trans &trans &trans &trans &bootloader &bootloader &kp INS &kp HOME &kp END &kp DEL &trans &trans
-          &trans &trans &trans &trans &kp DEL &kp BACKSPACE &trans &trans &trans &trans
+          &trans &trans &trans &trans &trans &trans &kp DEL &trans &trans &trans
 		>;
 		
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
