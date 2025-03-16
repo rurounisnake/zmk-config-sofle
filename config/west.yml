@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
+    - name: whoop-t
+      url-base: https://github.com/whoop-t
   projects:
     - name: zmk
       remote: zmkfirmware
