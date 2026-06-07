@@ -4,18 +4,13 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
-    - name: whoop-t
-      url-base: https://github.com/whoop-t
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3
       import: app/west.yml
     - name: zmk-helpers
       remote: urob
-      revision: main
-    - name: nice-one-punch-ok
-      remote: whoop-t
       revision: main
   self:
     path: config
