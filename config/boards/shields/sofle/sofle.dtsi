@@ -105,8 +105,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         status = "okay";
         compatible = "azoteq,iqs5xx";
         reg = <0x74>;
-        reset-gpios = <&pro_micro 20 GPIO_ACTIVE_LOW>;
-        rdy-gpios = <&pro_micro 21 GPIO_ACTIVE_HIGH>;
+        rdy-gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
 
         /* Enable features */
         one-finger-tap;
