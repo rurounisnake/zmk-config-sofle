@@ -27,6 +27,24 @@
   /
   {
 
+    combos {
+        compatible = "zmk,combos";
+        
+        // F + D + Space -> ENTER
+        combo_fd_space_enter {
+            timeout-ms = <50>;
+            key-positions = <LM1 LM2 LH0>;
+            bindings = <&kp ENTER>;
+        };
+
+        // E + R + T -> CTRL + ALT + DEL
+        combo_ert_ctrl_alt_del {
+            timeout-ms = <50>;
+            key-positions = <LT2 LT1 LT0>; 
+            bindings = <&kp LC(LA(DEL))>;
+        };
+    };
+
     hml: homerow_mods_left {
       compatible = "zmk,behavior-hold-tap";
       label = "HOMEROW_MODS_LEFT";
